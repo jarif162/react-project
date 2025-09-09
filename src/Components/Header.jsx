@@ -5,19 +5,21 @@ export default function Header() {
   return (
     <>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <a href="">Home</a>
-            </li>
-            <li>
-              <a href="">Task</a>
-            </li>
-            <li>
-              <a href="">About</a>
-            </li>
-          </ul>
-        </nav>
+        <HeaderStyled>
+          <nav>
+            <ul>
+              <li>
+                <a href="">Home</a>
+              </li>
+              <li>
+                <a href="">Task</a>
+              </li>
+              <li>
+                <a href="">About</a>
+              </li>
+            </ul>
+          </nav>
+        </HeaderStyled>
       </div>
     </>
   );
@@ -25,4 +27,21 @@ export default function Header() {
 
 const HeaderStyled = styled.header`
   background-color: black;
+
+  nav ul {
+    display: flex;
+    gap: 20px;
+
+    li {
+      transition: 0.3s ease-in-out;
+      a {
+        color: #fff;
+        padding: 20px 10px;
+      }
+
+      a:hover {
+        background-color: orange;
+      }
+    }
+  }
 `;
